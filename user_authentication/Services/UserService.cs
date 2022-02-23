@@ -14,9 +14,10 @@ namespace user_authentication.Services
 {
     public interface IUserService
     {
-        AuthenticateResponse Authenticate(AuthenticateRequest model);
+        AuthenticateResponse Authenticate(Nest.AuthenticateRequest model1, AuthenticateRequest model);
         IEnumerable<User> GetAll();
         User GetById(int id);
+        object Authenticate(Nest.AuthenticateRequest model, string v);
     }
     public class UserService : IUserService
     {
